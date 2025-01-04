@@ -319,6 +319,11 @@
     <Content Include="Templates\yummy-red-1.0.0\assets\vendor\swiper\swiper-bundle.min.js.map" />
     <Content Include="Views\UILayout\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\DefaultFeature.cshtml" />
+    <Content Include="Views\Default\DefaultAbout.cshtml" />
+    <Content Include="Views\Default\DefaultService.cshtml" />
+    <Content Include="Views\Default\DefaultProduct.cshtml" />
+    <Content Include="Views\Default\DefaultTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
