@@ -1,0 +1,32 @@
+﻿@model List<YummyProject.Models.Feature>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Öne Çıkan Alan</h2>
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th>#</th>
+        <th>Resim</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.FeatureId</th>
+            <th><img src="@item.ImageUrl" style="widht:50px;height:50px" /></th>
+            <th>@item.Title</th>
+            <th>@item.Description</th>
+            <th><a href="/Feature/DeleteFeature/@item.FeatureId" class="btn btn-danger">Sil</a></th>
+            <th><a href="#" class="btn btn-info">Güncelle</a></th>
+        </tr>
+    }
+</table>
+
+<a href="/Feature/AddFeature" class="btn btn-primary">Yeni Öne Çıkan Alan Ekle</a>

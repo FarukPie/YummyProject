@@ -1,0 +1,20 @@
+﻿@model YummyProject.Models.Feature
+@{
+    ViewBag.Title = "AddFeature";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yeni Öne Çıkan Alan Ekleme Sayfası</h2>
+
+<form method="post"> 
+        <label>Resim Url</label>
+        @Html.TextBoxFor(x=> x.ImageUrl, new {@class ="form-control"})
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x=>x.Title, new {@class ="form-control"})
+    <br />
+    @Html.TextAreaFor(x=>x.Description,1,4, new {@class ="form-control"})
+    <br />
+    <button class="btn btn-primary">Kaydet </button>
+</form>
+

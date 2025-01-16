@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -128,7 +129,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\YummyContext.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\DashBoardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,6 +141,14 @@
     <Compile Include="Migrations\202501041321112_initial.cs" />
     <Compile Include="Migrations\202501041321112_initial.Designer.cs">
       <DependentUpon>202501041321112_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202501051610061_initial1.cs" />
+    <Compile Include="Migrations\202501051610061_initial1.Designer.cs">
+      <DependentUpon>202501051610061_initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202501051614228_deneme33.cs" />
+    <Compile Include="Migrations\202501051614228_deneme33.Designer.cs">
+      <DependentUpon>202501051614228_deneme33.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\About.cs" />
@@ -191,6 +203,25 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\sb-admin\401.html" />
+    <Content Include="Templates\sb-admin\404.html" />
+    <Content Include="Templates\sb-admin\500.html" />
+    <Content Include="Templates\sb-admin\assets\demo\chart-area-demo.js" />
+    <Content Include="Templates\sb-admin\assets\demo\chart-bar-demo.js" />
+    <Content Include="Templates\sb-admin\assets\demo\chart-pie-demo.js" />
+    <Content Include="Templates\sb-admin\assets\demo\datatables-demo.js" />
+    <Content Include="Templates\sb-admin\assets\img\error-404-monochrome.svg" />
+    <Content Include="Templates\sb-admin\charts.html" />
+    <Content Include="Templates\sb-admin\css\styles.css" />
+    <Content Include="Templates\sb-admin\index.html" />
+    <Content Include="Templates\sb-admin\js\datatables-simple-demo.js" />
+    <Content Include="Templates\sb-admin\js\scripts.js" />
+    <Content Include="Templates\sb-admin\layout-sidenav-light.html" />
+    <Content Include="Templates\sb-admin\layout-static.html" />
+    <Content Include="Templates\sb-admin\login.html" />
+    <Content Include="Templates\sb-admin\password.html" />
+    <Content Include="Templates\sb-admin\register.html" />
+    <Content Include="Templates\sb-admin\tables.html" />
     <Content Include="Templates\yummy-red-1.0.0\assets\css\main.css" />
     <Content Include="Templates\yummy-red-1.0.0\assets\img\about-2.jpg" />
     <Content Include="Templates\yummy-red-1.0.0\assets\img\about.jpg" />
@@ -324,6 +355,10 @@
     <Content Include="Views\Default\DefaultService.cshtml" />
     <Content Include="Views\Default\DefaultProduct.cshtml" />
     <Content Include="Views\Default\DefaultTestimonial.cshtml" />
+    <Content Include="Views\Feature\Index.cshtml" />
+    <Content Include="Views\Feature\AddFeature.cshtml" />
+    <Content Include="Views\AdminLayout\Index.cshtml" />
+    <Content Include="Views\DashBoard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -359,6 +394,15 @@
     <EmbeddedResource Include="Migrations\202501041321112_initial.resx">
       <DependentUpon>202501041321112_initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501051610061_initial1.resx">
+      <DependentUpon>202501051610061_initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501051614228_deneme33.resx">
+      <DependentUpon>202501051614228_deneme33.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -395,8 +439,11 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
