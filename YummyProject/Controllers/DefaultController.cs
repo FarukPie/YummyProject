@@ -32,7 +32,7 @@ namespace YummyProject.Controllers
 
         public PartialViewResult DefaultProduct()
         {
-            var value=context.products.ToList();
+            var value=context.categories.ToList();
             return PartialView(value);  
         }
         public PartialViewResult DefaultTestimonial()
