@@ -22,6 +22,7 @@ namespace YummyProject.Context
         public DbSet<Product> products { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Testimonial> testimonials { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
 
     }
