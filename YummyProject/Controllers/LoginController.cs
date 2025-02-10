@@ -33,5 +33,13 @@ namespace YummyProject.Controllers
             Session["currentUser"] = admin.UserName;
             return RedirectToAction("Index", "Dashboard");
         }
+
+        public ActionResult signOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+
+            return RedirectToAction("SignIn", "Login");
+        }
     }
 }

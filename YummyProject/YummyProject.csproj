@@ -155,6 +155,10 @@
     <Compile Include="Migrations\202501271213564_mig_admin_table.Designer.cs">
       <DependentUpon>202501271213564_mig_admin_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502091016518_mig_socialmedia_added.cs" />
+    <Compile Include="Migrations\202502091016518_mig_socialmedia_added.Designer.cs">
+      <DependentUpon>202502091016518_mig_socialmedia_added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\About.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -169,6 +173,7 @@
     <Compile Include="Models\PhotoGallery.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\SocialMedia.cs" />
     <Compile Include="Models\Testimonial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -483,6 +488,7 @@
     <Content Include="Templates\login-form-02\scss\bootstrap\_variables.scss" />
     <Content Include="Templates\login-form-02\scss\style.scss" />
     <Content Include="Views\Login\SignIn.cshtml" />
+    <Content Include="Views\UILayout\SocialMedias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -526,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202501271213564_mig_admin_table.resx">
       <DependentUpon>202501271213564_mig_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502091016518_mig_socialmedia_added.resx">
+      <DependentUpon>202502091016518_mig_socialmedia_added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
