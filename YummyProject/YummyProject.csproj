@@ -320,6 +320,7 @@
     <Content Include="Views\UILayout\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\DefaultFeature.cshtml" />
+    <Content Include="Views\Default\DefaultAbout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
