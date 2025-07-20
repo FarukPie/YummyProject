@@ -138,6 +138,10 @@
     <Compile Include="Migrations\202507191621351_initial.Designer.cs">
       <DependentUpon>202507191621351_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202507200827023_mig1.cs" />
+    <Compile Include="Migrations\202507200827023_mig1.Designer.cs">
+      <DependentUpon>202507200827023_mig1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\About.cs" />
     <Compile Include="Models\Booking.cs" />
@@ -321,6 +325,8 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\DefaultFeature.cshtml" />
     <Content Include="Views\Default\DefaultAbout.cshtml" />
+    <Content Include="Views\Default\DefaultService.cshtml" />
+    <Content Include="Views\Default\DefaultStat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -355,6 +361,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202507191621351_initial.resx">
       <DependentUpon>202507191621351_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202507200827023_mig1.resx">
+      <DependentUpon>202507200827023_mig1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

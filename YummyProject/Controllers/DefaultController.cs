@@ -24,5 +24,14 @@ namespace YummyProject.Controllers
             var value=context.Abouts.ToList();
             return PartialView(value);
         }
+        public PartialViewResult DefaultService()
+        {
+            var values=context.Services.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultStat()
+        {
+            return PartialView();
+        }
     }
 }
