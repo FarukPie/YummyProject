@@ -33,5 +33,39 @@ namespace YummyProject.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult DefaultProduct()
+        {
+            var values=context.Products.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultTestimonial()
+        {
+            var values=context.Testimonials.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultEvent()
+        {
+            var values=context.Events.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultChef()
+        {
+            var value=context.Chefs.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult DefaultBook()
+        {
+            return PartialView();
+        }
+        public PartialViewResult DefaultGallery()
+        {
+            var value=context.PhotoGalleries.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult DefaultContact()
+        {
+            var value = context.ContactInfos.ToList();
+            return PartialView(value);
+        }
     }
 }

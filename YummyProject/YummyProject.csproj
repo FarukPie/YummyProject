@@ -327,6 +327,13 @@
     <Content Include="Views\Default\DefaultAbout.cshtml" />
     <Content Include="Views\Default\DefaultService.cshtml" />
     <Content Include="Views\Default\DefaultStat.cshtml" />
+    <Content Include="Views\Default\DefaultProduct.cshtml" />
+    <Content Include="Views\Default\DefaultTestimonial.cshtml" />
+    <Content Include="Views\Default\DefaultEvent.cshtml" />
+    <Content Include="Views\Default\DefaultChef.cshtml" />
+    <Content Include="Views\Default\DefaultBook.cshtml" />
+    <Content Include="Views\Default\DefaultGallery.cshtml" />
+    <Content Include="Views\Default\DefaultContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
