@@ -128,6 +128,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\YummyContext.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -146,6 +149,14 @@
     <Compile Include="Migrations\202507211547207_mig2.cs" />
     <Compile Include="Migrations\202507211547207_mig2.Designer.cs">
       <DependentUpon>202507211547207_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202507211617174_mig3.cs" />
+    <Compile Include="Migrations\202507211617174_mig3.Designer.cs">
+      <DependentUpon>202507211617174_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202507211737557_mig4.cs" />
+    <Compile Include="Migrations\202507211737557_mig4.Designer.cs">
+      <DependentUpon>202507211737557_mig4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\About.cs" />
@@ -200,6 +211,25 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\sbAdmin\401.html" />
+    <Content Include="Templates\sbAdmin\404.html" />
+    <Content Include="Templates\sbAdmin\500.html" />
+    <Content Include="Templates\sbAdmin\assets\demo\chart-area-demo.js" />
+    <Content Include="Templates\sbAdmin\assets\demo\chart-bar-demo.js" />
+    <Content Include="Templates\sbAdmin\assets\demo\chart-pie-demo.js" />
+    <Content Include="Templates\sbAdmin\assets\demo\datatables-demo.js" />
+    <Content Include="Templates\sbAdmin\assets\img\error-404-monochrome.svg" />
+    <Content Include="Templates\sbAdmin\charts.html" />
+    <Content Include="Templates\sbAdmin\css\styles.css" />
+    <Content Include="Templates\sbAdmin\index.html" />
+    <Content Include="Templates\sbAdmin\js\datatables-simple-demo.js" />
+    <Content Include="Templates\sbAdmin\js\scripts.js" />
+    <Content Include="Templates\sbAdmin\layout-sidenav-light.html" />
+    <Content Include="Templates\sbAdmin\layout-static.html" />
+    <Content Include="Templates\sbAdmin\login.html" />
+    <Content Include="Templates\sbAdmin\password.html" />
+    <Content Include="Templates\sbAdmin\register.html" />
+    <Content Include="Templates\sbAdmin\tables.html" />
     <Content Include="Templates\yummy\assets\css\main.css" />
     <Content Include="Templates\yummy\assets\img\about-2.jpg" />
     <Content Include="Templates\yummy\assets\img\about.jpg" />
@@ -341,6 +371,12 @@
     <Content Include="Views\Default\DefaultContact.cshtml" />
     <Content Include="Views\Feature\Index.cshtml" />
     <Content Include="Views\Feature\AddFeature.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\AddAbout.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Chef\Index.cshtml" />
+    <Content Include="Views\Chef\AddChef.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -381,6 +417,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202507211547207_mig2.resx">
       <DependentUpon>202507211547207_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202507211617174_mig3.resx">
+      <DependentUpon>202507211617174_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202507211737557_mig4.resx">
+      <DependentUpon>202507211737557_mig4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

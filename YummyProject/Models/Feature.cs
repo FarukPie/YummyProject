@@ -10,16 +10,16 @@ namespace YummyProject.Models
     {
         public int FeatureID { get; set; }
 
-        [Required(ErrorMessage ="image Url is not be empty")]
+        [Required(ErrorMessage = "This field cannot be left blank")]
         public string ImageUrl { get; set; }
 
-        [Required(ErrorMessage = "Title is not be empty")]
+        [Required(ErrorMessage = "This field cannot be left blank")]
         public string Title { get; set; }
 
-        [Required(ErrorMessage = "Description is not be empty")]
+        [Required(ErrorMessage = "This field cannot be left blank")]
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "Video Url is not be empty")]
+        [Required(ErrorMessage = "This field cannot be left blank")]
         public string VideoUrl { get; set; }
     }
 }

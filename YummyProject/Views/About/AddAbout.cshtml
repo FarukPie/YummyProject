@@ -1,0 +1,52 @@
+﻿@model YummyProject.Models.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddAbout</h2>
+
+<form method="post">
+
+    <label>Image Url 1</label>
+    @Html.TextBoxFor(x => x.ImageUrl1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ImageUrl1)
+    <br />
+    <label>Image Url 2</label>
+    @Html.TextBoxFor(x => x.ImageUrl2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.ImageUrl2)
+    <br />
+    <label>Top Description</label>
+    @Html.TextBoxFor(x => x.TopDescription, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.TopDescription)
+    <br />
+    <label>Item 1</label>
+    @Html.TextBoxFor(x => x.Item1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Item1)
+    <br />
+    <label>Item 2</label>
+    @Html.TextBoxFor(x => x.Item2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Item2)
+    <br />
+    <label>Item 3</label>
+    @Html.TextBoxFor(x => x.Item3, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Item3)
+    <br />
+    <label>Description</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description)
+    <br />
+    <label>Video Url</label>
+    @Html.TextBoxFor(x => x.VideoUrl, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.VideoUrl)
+    <br />
+    <label>Phone Number</label>
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PhoneNumber)
+
+    <br />
+    <button class="btn btn-primary">Save</button>
+    </form>
+
+
+
