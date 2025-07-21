@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\YummyContext.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
@@ -141,6 +142,10 @@
     <Compile Include="Migrations\202507200827023_mig1.cs" />
     <Compile Include="Migrations\202507200827023_mig1.Designer.cs">
       <DependentUpon>202507200827023_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202507211547207_mig2.cs" />
+    <Compile Include="Migrations\202507211547207_mig2.Designer.cs">
+      <DependentUpon>202507211547207_mig2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\About.cs" />
@@ -334,6 +339,8 @@
     <Content Include="Views\Default\DefaultBook.cshtml" />
     <Content Include="Views\Default\DefaultGallery.cshtml" />
     <Content Include="Views\Default\DefaultContact.cshtml" />
+    <Content Include="Views\Feature\Index.cshtml" />
+    <Content Include="Views\Feature\AddFeature.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -371,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202507200827023_mig1.resx">
       <DependentUpon>202507200827023_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202507211547207_mig2.resx">
+      <DependentUpon>202507211547207_mig2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
