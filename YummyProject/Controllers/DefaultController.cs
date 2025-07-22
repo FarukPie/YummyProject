@@ -35,7 +35,7 @@ namespace YummyProject.Controllers
         }
         public PartialViewResult DefaultProduct()
         {
-            var values=context.Products.ToList();
+            var values=context.Categories.ToList();
             return PartialView(values);
         }
         public PartialViewResult DefaultTestimonial()

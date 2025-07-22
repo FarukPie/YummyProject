@@ -129,8 +129,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\YummyContext.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChefController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -158,8 +160,13 @@
     <Compile Include="Migrations\202507211737557_mig4.Designer.cs">
       <DependentUpon>202507211737557_mig4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202507221713406_mig5.cs" />
+    <Compile Include="Migrations\202507221713406_mig5.Designer.cs">
+      <DependentUpon>202507221713406_mig5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\About.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Chef.cs" />
@@ -377,6 +384,8 @@
     <Content Include="Views\Category\AddCategory.cshtml" />
     <Content Include="Views\Chef\Index.cshtml" />
     <Content Include="Views\Chef\AddChef.cshtml" />
+    <Content Include="Views\AdminLayout\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -423,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202507211737557_mig4.resx">
       <DependentUpon>202507211737557_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202507221713406_mig5.resx">
+      <DependentUpon>202507221713406_mig5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
