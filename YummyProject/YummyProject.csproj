@@ -165,6 +165,10 @@
     <Compile Include="Migrations\202507221713406_mig5.Designer.cs">
       <DependentUpon>202507221713406_mig5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202507281619172_mig6.cs" />
+    <Compile Include="Migrations\202507281619172_mig6.Designer.cs">
+      <DependentUpon>202507281619172_mig6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\About.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -179,6 +183,7 @@
     <Compile Include="Models\PhotoGallery.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\SocialMedia.cs" />
     <Compile Include="Models\Testimonial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -505,6 +510,7 @@
     <Content Include="Templates\login-form\scss\bootstrap\_variables.scss" />
     <Content Include="Templates\login-form\scss\style.scss" />
     <Content Include="Views\Login\SignIn.cshtml" />
+    <Content Include="Views\UILayout\SocaiMedias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -554,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202507221713406_mig5.resx">
       <DependentUpon>202507221713406_mig5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202507281619172_mig6.resx">
+      <DependentUpon>202507281619172_mig6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
