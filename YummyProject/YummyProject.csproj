@@ -130,6 +130,7 @@
     <Compile Include="Context\YummyContext.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
@@ -516,6 +517,8 @@
     <Content Include="Views\Category\UpdateCategory.cshtml" />
     <Content Include="Views\Chef\UpdateChef.cshtml" />
     <Content Include="Views\Feature\UpdateFeature.cshtml" />
+    <Content Include="Views\Booking\Pending.cshtml" />
+    <Content Include="Views\Booking\Accepted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

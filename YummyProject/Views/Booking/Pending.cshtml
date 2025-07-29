@@ -1,0 +1,36 @@
+﻿@model List<YummyProject.Models.Booking>
+@{
+    ViewBag.Title = "Pending";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Pending Bookings</h2>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Action</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.BookingDate.ToShortDateString()</td>
+            <td>
+                @using (Html.BeginForm("Accept", "Booking", FormMethod.Post))
+                {
+                    @Html.Hidden("id", item.BookingID)
+                    <button type="submit" class="btn btn-success">Accept</button>
+                }
+            </td>
+
+
+        </tr>
+    }
+
+
+</table>
+

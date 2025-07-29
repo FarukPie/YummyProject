@@ -1,0 +1,29 @@
+﻿@model List<YummyProject.Models.Booking>
+@{
+    ViewBag.Title = "Accepted";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Accepted Bookings</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Date</th>
+       
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.BookingDate.ToShortDateString()</td>
+
+           
+        </tr>
+    }
+
+
+</table>
+
