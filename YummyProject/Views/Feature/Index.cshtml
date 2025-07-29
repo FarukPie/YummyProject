@@ -1,7 +1,7 @@
 ﻿@model List<YummyProject.Models.Feature>
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
 <h2>Feature</h2>
@@ -17,8 +17,8 @@
     <th>Update</th>
     </tr>
 
-    @foreach(var item in Model)
-            {
+    @foreach (var item in Model)
+    {
                 <tr>
                     <th>@item.FeatureID</th>
                     <td><img src="@item.ImageUrl" style="width:50px;height:50px" /></td>
@@ -26,7 +26,7 @@
                     <td>@item.Description</td>
                     <td>@item.VideoUrl</td>
                     <td><a href="/Feature/DeleteFeature/@item.FeatureID" class="btn btn-danger">Delete</a></td>
-                    <td><a href="#" class="btn btn-info">Update</a></td>
+                    <td><a href="/Feature/UpdateFeature/@item.FeatureID" class="btn btn-info">Update</a></td>
                 </tr>
             }
 </table>

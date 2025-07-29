@@ -511,6 +511,11 @@
     <Content Include="Templates\login-form\scss\style.scss" />
     <Content Include="Views\Login\SignIn.cshtml" />
     <Content Include="Views\UILayout\SocaiMedias.cshtml" />
+    <Content Include="Views\UILayout\ContactUs.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Chef\UpdateChef.cshtml" />
+    <Content Include="Views\Feature\UpdateFeature.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

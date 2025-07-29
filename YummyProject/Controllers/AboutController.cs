@@ -1,5 +1,6 @@
 ﻿ using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -56,5 +57,44 @@ namespace YummyProject.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult UpdateAbout(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var about = context.Abouts.Find(id);
+            if (about == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(about); // Mevcut veriyi view'a gönder
+        }
+
+        [HttpPost]
+      
+        public ActionResult UpdateAbout(About about)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(about);
+            }
+
+            context.Entry(about).State = EntityState.Modified; 
+            int result = context.SaveChanges();
+
+            if (result == 0)
+            {
+                ModelState.AddModelError("", "Güncelleme başarısız!");
+                return View(about);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

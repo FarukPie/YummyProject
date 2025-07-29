@@ -18,13 +18,13 @@
     {
         <tr>
             <th>@item.ChefID</th>
-            <th>@item.ImageUrl</th>
-            <th>@item.Name</th>
-            <th>@item.Title</th>
-            <th>@item.Description</th>
+            <td>@item.ImageUrl</td>
+            <td>@item.Name</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
 
             <td><a href="/Chef/DeleteChef/@item.ChefID" class="btn btn-danger">Delete</a></td>
-            <td><a href="#" class="btn btn-info">Update</a></td>
+            <td><a href="/Chef/UpdateChef/@item.ChefID" class="btn btn-info">Update</a></td>
         </tr>
     }
 

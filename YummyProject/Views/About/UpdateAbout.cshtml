@@ -1,0 +1,110 @@
+﻿@model YummyProject.Models.About
+@{
+    ViewBag.Title = "Update About Section";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<br /><br />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Update About Section</h4>
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post, new { @class = "form-horizontal" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(model => model.AboutID)
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.TopDescription, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextAreaFor(model => model.TopDescription, new { @class = "form-control", rows = 3 })
+                                @Html.ValidationMessageFor(model => model.TopDescription, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.ImageUrl1, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.ImageUrl1, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ImageUrl1, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.ImageUrl2, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.ImageUrl2, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ImageUrl2, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Item1, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.Item1, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Item1, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Item2, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.Item2, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Item2, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Item3, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.Item3, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Item3, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.VideoUrl, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.VideoUrl, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.VideoUrl, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "col-sm-2 col-form-label" })
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", type = "tel" })
+                                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div><br />
+
+                        <div class="form-group row">
+                            <div class="col-sm-10 offset-sm-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Update
+                                </button>
+                                <a href="@Url.Action("Index")" class="btn btn-secondary">
+                                    <i class="fas fa-arrow-left"></i> Back to List
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

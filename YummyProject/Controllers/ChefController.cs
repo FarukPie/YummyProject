@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -54,6 +55,43 @@ namespace YummyProject.Controllers
 
             context.Chefs.Remove(value);
             context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult UpdateChef(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var category = context.Chefs.Find(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(category); // Mevcut veriyi view'a gönder
+        }
+
+        [HttpPost]
+
+        public ActionResult UpdateChef(Chef chef)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(chef);
+            }
+
+            context.Entry(chef).State = EntityState.Modified;
+            int result = context.SaveChanges();
+
+            if (result == 0)
+            {
+                ModelState.AddModelError("", "Güncelleme başarısız!");
+                return View(chef);
+            }
 
             return RedirectToAction("Index");
         }

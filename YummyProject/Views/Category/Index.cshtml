@@ -15,11 +15,11 @@
     @foreach (var item in Model)
     {
         <tr>
-            <th>@item.CategoryID</th>
-            <th>@item.CategoryName</th>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
 
             <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger">Delete</a></td>
-            <td><a href="#" class="btn btn-info">Update</a></td>
+            <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-info">Update</a></td>
         </tr>
     }
 
