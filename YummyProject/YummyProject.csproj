@@ -135,6 +135,7 @@
     <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -522,6 +523,7 @@
     <Content Include="Views\Booking\Accepted.cshtml" />
     <Content Include="Views\Default\DefaultMessage.cshtml" />
     <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Event\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
