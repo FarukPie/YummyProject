@@ -27,11 +27,11 @@ namespace YummyProject.Controllers
                 context.Messages.Add(message);
                 context.SaveChanges();
                 TempData["Success"] = "Mesaj başarıyla gönderildi.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Default");
             }
 
             TempData["Error"] = "Mesaj gönderilirken hata oluştu. Lütfen tüm alanları doldurun.";
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Default");
         }
         public ActionResult MarkAsRead(int id)
         {

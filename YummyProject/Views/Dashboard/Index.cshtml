@@ -1,4 +1,4 @@
-﻿
+﻿@model List<YummyProject.Models.Booking>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -11,9 +11,9 @@
     <div class="col-xl-3 col-md-6">
         <div class="card bg-primary text-white mb-4">
             <div class="card-body">Soup Count</div>
-            <span class="card-body display-6" ><strong>@ViewBag.soupCount</strong></span>
+            <span class="card-body display-6"><strong>@ViewBag.soupCount</strong></span>
             <div class="card-footer d-flex align-items-center justify-content-between">
-               
+
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
             <div class="card-body">Most Expensive Product</div>
             <span class="card-body display-6"><strong>@ViewBag.mostExpensive</strong></span>
             <div class="card-footer d-flex align-items-center justify-content-between">
-              
+
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
             <div class="card-body">Average Price</div>
             <span class="card-body display-6"><strong>@ViewBag.avgPrice.ToString("00.00") ₺</strong></span>
             <div class="card-footer d-flex align-items-center justify-content-between">
-             
+
             </div>
         </div>
     </div>
@@ -42,6 +42,39 @@
             <div class="card-footer d-flex align-items-center justify-content-between">
             </div>
         </div>
+    </div>
+</div>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        All Customers List
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Date</th>
+                    <th>Person Count</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var booking in Model)
+                {
+                    <tr>
+                        <td>@booking.Name</td>
+                        <td>@booking.Email</td>
+                        <td>@booking.PhoneNumber</td>
+                        <td>@booking.BookingDate.ToShortDateString()</td>
+                        <td>@booking.PersonCount</td>
+                        <td>@booking.MessageContent</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 </div>
 

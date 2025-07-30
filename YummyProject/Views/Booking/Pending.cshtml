@@ -9,7 +9,10 @@
     <tr>
         <th>Name</th>
         <th>Email</th>
+        <th>Phone Number</th>
         <th>Date</th>
+        <th>Person Count</th>
+        <th>Message</th>
         <th>Action</th>
         <th>Delete</th>
 
@@ -19,7 +22,10 @@
         <tr>
             <td>@item.Name</td>
             <td>@item.Email</td>
+            <td>@item.PhoneNumber</td>
             <td>@item.BookingDate.ToShortDateString()</td>
+            <td>@item.PersonCount</td>
+            <td>@item.MessageContent</td>
             <td>
                 @using (Html.BeginForm("Accept", "Booking", FormMethod.Post))
                 {

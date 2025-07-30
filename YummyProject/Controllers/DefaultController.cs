@@ -32,6 +32,11 @@ namespace YummyProject.Controllers
         }
         public PartialViewResult DefaultStat()
         {
+            ViewBag.TotalCategories = context.Categories.Count();
+            ViewBag.TotalChefs = context.Chefs.Count();
+            ViewBag.TotalDishes = context.Products.Count();
+            ViewBag.AcceptedBookings = context.Bookings.Count(b => b.IsApproved == true);
+
             return PartialView();
         }
         public PartialViewResult DefaultProduct()
