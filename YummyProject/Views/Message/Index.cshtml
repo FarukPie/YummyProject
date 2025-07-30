@@ -1,0 +1,56 @@
+﻿@model List<YummyProject.Models.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Gelen Mesajlar</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Is Read?</th>
+            <th>Process</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td>@message.Name</td>
+                <td>@message.Email</td>
+                <td>@message.Subject</td>
+                <td>@message.MessageContent</td>
+                <td>@(message.IsRead ? "Yes" : "No")</td>
+                <td>
+                    @if (!message.IsRead)
+                    {
+                        <form action="@Url.Action("MarkAsRead", "Message")" method="post">
+                            @Html.Hidden("id", message.MessageID)
+                            <button type="submit" class="btn btn-success btn-sm">Read</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-muted">✔</span>
+                    }
+                </td>
+                <td>
+                    <form action="@Url.Action("Delete", "Message")" method="post" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete?');">
+                        @Html.Hidden("id", message.MessageID)
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+
+
+               
+            </tr>
+        }
+    </tbody>
+</table>

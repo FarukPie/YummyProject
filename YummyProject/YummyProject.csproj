@@ -138,6 +138,7 @@
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -519,6 +520,8 @@
     <Content Include="Views\Feature\UpdateFeature.cshtml" />
     <Content Include="Views\Booking\Pending.cshtml" />
     <Content Include="Views\Booking\Accepted.cshtml" />
+    <Content Include="Views\Default\DefaultMessage.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

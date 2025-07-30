@@ -56,5 +56,16 @@ namespace YummyProject.Controllers
             }
             return RedirectToAction("Pending");
         }
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var booking = context.Bookings.Find(id);
+            if (booking != null)
+            {
+                context.Bookings.Remove(booking);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Pending");
+        }
     }
 }

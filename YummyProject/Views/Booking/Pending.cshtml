@@ -11,6 +11,7 @@
         <th>Email</th>
         <th>Date</th>
         <th>Action</th>
+        <th>Delete</th>
 
     </tr>
     @foreach (var item in Model)
@@ -25,6 +26,13 @@
                     @Html.Hidden("id", item.BookingID)
                     <button type="submit" class="btn btn-success">Accept</button>
                 }
+            </td>
+            <td>
+                <form action="@Url.Action("Delete", "Booking")" method="post" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete?');">
+                    @Html.Hidden("id", item.BookingID)
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+
             </td>
 
 

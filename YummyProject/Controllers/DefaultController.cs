@@ -68,5 +68,9 @@ namespace YummyProject.Controllers
             var value = context.ContactInfos.ToList();
             return PartialView(value);
         }
+        public PartialViewResult DefaultMessage()
+        {
+            return PartialView();
+        }
     }
 }
