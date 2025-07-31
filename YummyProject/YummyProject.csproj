@@ -524,6 +524,8 @@
     <Content Include="Views\Default\DefaultMessage.cshtml" />
     <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Event\AddEvent.cshtml" />
+    <Content Include="Views\Event\UpdateEvent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
