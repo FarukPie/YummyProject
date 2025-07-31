@@ -140,6 +140,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\PhotoGalleryController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -526,6 +527,9 @@
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Event\AddEvent.cshtml" />
     <Content Include="Views\Event\UpdateEvent.cshtml" />
+    <Content Include="Views\PhotoGallery\Index.cshtml" />
+    <Content Include="Views\PhotoGallery\AddPhoto.cshtml" />
+    <Content Include="Views\PhotoGallery\UpdatePhoto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

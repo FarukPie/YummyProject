@@ -1,0 +1,32 @@
+﻿@model List<YummyProject.Models.PhotoGallery>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Photo Gallery</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Image Url</th>
+        
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+           
+            <td>@item.ImageUrl</td>
+
+
+            <td><a href="/PhotoGallery/DeletePhoto/@item.PhotoGalleryID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/PhotoGallery/UpdatePhoto/@item.PhotoGalleryID" class="btn btn-info">Update</a></td>
+        </tr>
+    }
+
+
+</table>
+<br />
+<a href="/PhotoGallery/AddPhoto" class="btn btn-primary">Add Photo</a>
+
