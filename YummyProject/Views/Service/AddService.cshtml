@@ -1,0 +1,26 @@
+﻿@model YummyProject.Models.Service
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>AddService</h2>
+
+
+<form method="post">
+
+    <label>Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Title)
+    <br />
+    <label>Description</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description)
+    <br />
+    <label>Icon</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Icon)
+    <br />
+    <br />
+    <button class="btn btn-primary">Save</button>
+</form>
